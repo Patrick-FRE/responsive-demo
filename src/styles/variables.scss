@@ -1,0 +1,25 @@
+// Typography
+$elc-font: 'Helvetica Neue', Helvetica, Arial,
+  sans-serif;
+
+// Width rules
+$max-width: 1920px;
+
+// Media queries
+$landscape-up: 1024px;
+
+// Colors
+$color-white: #ffffff;
+$color-black: #1a1a1a;
+$color-grey: #999999;
+$color-light-grey: #e6e6e6;
+$color-light-grey-2: #fafafa;
+
+// margins
+$container-margin: 0 5%;
+
+// breadcrumb
+$font-size__breadcrumb: 15px;
+$font-weight__breadcrumb: 400;
+$line-height__breadcrumb: 20px;
+$color__breadcrumb: $color-grey;

@@ -1,0 +1,317 @@
+@import 'variables.scss';
+@import 'mixin.scss';
+
+.elc-product {
+  font-family: $elc-font;
+  margin: $container-margin;
+  margin-top: 21px;
+
+  &___breadcrumb {
+    @include text-style(
+      $font-size__breadcrumb,
+      $font-weight__breadcrumb,
+      $line-height__breadcrumb,
+      $color__breadcrumb
+    );
+    @media only screen and (min-width: $landscape-up) {
+      left: 50%;
+      position: relative;
+      width: 50%;
+      margin-top: 70px;
+      @include text-style(
+        17px,
+        400,
+        24px,
+        $color__breadcrumb
+      );
+    }
+  }
+  &__hr-mt {
+    margin-top: 20px;
+    @media only screen and (min-width: $landscape-up) {
+      margin-top: 36px;
+    }
+    &-lg {
+      margin-top: 60px;
+      @media only screen and (min-width: $landscape-up) {
+        margin-top: 10px;
+      }
+    }
+  }
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 11px;
+    @media only screen and (min-width: $landscape-up) {
+      flex-direction: row;
+      align-items: center;
+      > * {
+        width: 50%;
+        height: 674px;
+      }
+    }
+  }
+  .elc-product-img {
+    object-fit: contain;
+    height: 424px;
+    @media only screen and (min-width: $landscape-up) {
+      height: 674px;
+    }
+  }
+
+  .elc-product-dec {
+    &__title {
+      @include text-style(
+        20px,
+        700,
+        24px,
+        $color-black
+      );
+      @media only screen and (min-width: $landscape-up) {
+        @include text-style(
+          28px,
+          700,
+          32px,
+          $color-black
+        );
+      }
+    }
+
+    &__sub-title {
+      margin-top: 7px;
+      @include text-style(
+        15px,
+        400,
+        20px,
+        $color-grey
+      );
+      @media only screen and (min-width: $landscape-up) {
+        margin-top: 8px;
+        @include text-style(
+          17px,
+          400,
+          24px,
+          $color-grey
+        );
+      }
+    }
+
+    &__rating {
+      margin-top: 13px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      &-starts {
+        height: 17px;
+      }
+      &-arrow {
+        margin-left: 5px;
+      }
+      @media only screen and (min-width: $landscape-up) {
+        height: 26px;
+      }
+    }
+
+    .elc-product-dec__features {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      @media only screen and (min-width: $landscape-up) {
+        flex-direction: row;
+      }
+      &-item {
+        margin-top: 23px;
+        font-size: 15px;
+        @media only screen and (min-width: $landscape-up) {
+          width: 50%;
+          font-size: 17px;
+          line-height: 24px;
+        }
+      }
+    }
+    .elc-product-dec__shade {
+      margin-top: 31px;
+      &-wrapper {
+        height: 60px;
+        border: 2px solid $color-light-grey;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        @include text-style(
+          20px,
+          700,
+          20px,
+          $color-black
+        );
+        @media only screen and (min-width: $landscape-up) {
+          margin-top: 36px;
+          width: 45%;
+        }
+
+        &-color {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  .elc-product-purchase {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (min-width: $landscape-up) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__quantity {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      > div {
+        display: flex;
+        width: 50%;
+        align-items: center;
+        justify-content: flex-start;
+        @include text-style(
+          15px,
+          700,
+          20px,
+          $color-black
+        );
+        *:not(:first-child) {
+          margin-left: 18px;
+        }
+        @media only screen and (min-width: $landscape-up) {
+          @include text-style(
+            17px,
+            700,
+            24px,
+            $color-black
+          );
+        }
+      }
+      &-arrow {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__price {
+      height: 60px;
+      line-height: 60px;
+      @include text-style(
+        20px,
+        700,
+        24px,
+        $color-black
+      );
+      @media only screen and (min-width: $landscape-up) {
+        margin-top: 36px;
+        width: 50%;
+        @include text-style(
+          28px,
+          700,
+          32px,
+          $color-black
+        );
+      }
+    }
+    &__action {
+      @media only screen and (min-width: $landscape-up) {
+        margin-top: 36px;
+        width: 50%;
+      }
+    }
+  }
+
+  .elc-product-grid {
+    &__title {
+      margin-top: 19px;
+      @include text-style(
+        22px,
+        700,
+        24px,
+        $color-black
+      );
+    }
+
+    &-items {
+      display: flex;
+      flex-direction: column;
+      @media only screen and (min-width: $landscape-up) {
+        flex-direction: row;
+        gap: 20px;
+      }
+      &__item {
+        margin-top: 32px;
+
+        @media only screen and (min-width: $landscape-up) {
+          width: 25%;
+        }
+        div {
+          flex-grow: 1;
+        }
+        figure {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 344px;
+          background-color: $color-light-grey-2;
+          .elc-product-img {
+            height: 178px;
+            object-fit: contain;
+          }
+        }
+        h1 {
+          margin-top: 20px;
+          @include text-style(
+            17px,
+            400,
+            24px,
+            $color-black
+          );
+        }
+        h4 {
+          @include text-style(
+            17px,
+            400,
+            24px,
+            $color-grey
+          );
+        }
+        button {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.elc-btn {
+  height: 60px;
+  background-color: $color-black;
+  outline: none;
+  border: none;
+  width: 100%;
+  @include text-style(
+    17px,
+    700,
+    24px,
+    $color-white
+  );
+  @media only screen and (min-width: $landscape-up) {
+    height: 64px;
+  }
+
+  &-outlined {
+    border: 2px solid $color-light-grey;
+    background-color: $color-white;
+    color: $color-black;
+  }
+}
