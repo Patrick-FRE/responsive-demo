@@ -52,11 +52,17 @@
       }
     }
   }
-  .elc-product-img {
-    object-fit: contain;
-    height: 424px;
-    @media only screen and (min-width: $landscape-up) {
-      height: 674px;
+  .elc-product-img-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .elc-product-img {
+      object-fit: contain;
+      height: 424px;
+      @media only screen and (min-width: $landscape-up) {
+        height: 674px;
+      }
     }
   }
 
@@ -254,8 +260,10 @@
         @media only screen and (min-width: $landscape-up) {
           width: 25%;
         }
-        div {
-          flex-grow: 1;
+        &__des {
+          height: calc(100% - 344px);
+          display: flex;
+          flex-direction: column;
         }
         figure {
           display: flex;
@@ -278,6 +286,7 @@
           );
         }
         h4 {
+          flex-grow: 1;
           @include text-style(
             17px,
             400,
